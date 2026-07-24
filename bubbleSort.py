@@ -11,3 +11,5 @@ for i in range(n-1): #Loop through sort
             break
 
 print("Sorted array:", sort)
+
+# bubble sort works by repeatedly swapping adjacent elements if they are in the wrong order. This process is repeated until the entire array is sorted.
