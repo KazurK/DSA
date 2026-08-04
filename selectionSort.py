@@ -11,5 +11,6 @@ for i in range(n-1):
 
     print("Sorted array:", sort)
 
-# Selection sort works by going through the array and finding the minimum element in the unsorted part of the array and swapping it with the first unsorted element. This process is repeated for all elements until the entire array is sorted.
-
+# go though the array and find the lowest value. 
+# move the lowest value to the front of the array.
+# loop though the array as many time as there are values
