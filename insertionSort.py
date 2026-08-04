@@ -14,4 +14,6 @@ for i in range(1, n):
 
 print ("Sorted array:", sort)
 
-# Insertion sort works by dividing the array into a sorted and an unsorted part. It takes one element from the unsorted part and finds its correct position in the sorted part by comparing it with the elements in the sorted part. This process is repeated until all elements are sorted.
+# take the first value from the unsorted part of the array
+# move the value into the correct place in the sorted part of the array
+# go through the unsorted part of the array as many times as there are values
