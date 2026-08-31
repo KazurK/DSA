@@ -37,7 +37,7 @@ def deleteSpecificNode(head, nodeToDelete):
         return head
 
     currentNode.next = currentNode.next.next 
-    #finally we change the pointer to the node after the node to be deleted NOTE: since we are just changing the pointer, the node to be deleted is still in memory and will be cleaned up with pythons garbage collecter. in C++ we would 
+    #finally we change the pointer to the node after the node to be deleted NOTE: since we are just changing the pointer, the node to be deleted is still in memory and will be cleaned up with pythons garbage collecter. in C++ we would need to free that space in memory 
 
     return head
 
