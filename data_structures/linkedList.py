@@ -1,10 +1,10 @@
-class node: #creating the structure of a node
+class Node: #creating the structure of a node
     def __init__(self, data):
         self.data = data
         self.next = None
 
 #printing the list of nodes 
-def traverseAndPrint(head):
+def traverse_and_print(head):
     currentNode = head
 
     while currentNode:
@@ -13,7 +13,7 @@ def traverseAndPrint(head):
     print("null")
 
 #Find the smallest value in a linked list
-def findSmallestValue(head):
+def find_smallest_value(head):
     minValue = head.data
     currentNode = head
 
@@ -24,7 +24,7 @@ def findSmallestValue(head):
     print("the smallest number in the linked list is:", minValue)
 
 #delete a specific node from the linked list
-def deleteSpecificNode(head, nodeToDelete):
+def delete_specific_node(head, nodeToDelete):
 
     if head == nodeToDelete: #if we are deleting the first node then we change the head to the next node
         return head.next 
@@ -41,7 +41,7 @@ def deleteSpecificNode(head, nodeToDelete):
 
     return head
 
-def insertNodeAtPosition(head, newNode, position):
+def insert_node_at_position(head, newNode, position):
     if position == 1: #if the position that we want to insert the new node in is 1 then we replace the linked list head 
         newNode.next = head
         return newNode
@@ -49,24 +49,14 @@ def insertNodeAtPosition(head, newNode, position):
     currentNode = head #looks for the node BEFORE the insertion point
     for _ in range(position - 2):
         if currentNode is None:
-            break
+            return head
+
         currentNode = currentNode.next
-
-        newNode.next = currentNode.next #add the new Node and assign the pointer to the next node
-        currentNode.next = newNode
+    if currentNode is None:
         return head
+    
+    newNode.next = currentNode.next #add the new Node and assign the pointer to the next node
+    currentNode.next = newNode
+    return head
 
-#assigning values to each node
-node1 = node(13)
-node2 = node(11)
-node3 = node(2)
-node4 = node(12)
 
-#linking nodes together
-node1.next = node2
-node2.next = node3
-node3.next = node4
-
-deleteSpecificNode(node1, node3)
-traverseAndPrint(node1)
-findSmallestValue(node1)
