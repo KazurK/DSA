@@ -7,8 +7,9 @@ for i in range(n-1): #Loop through sort
         if sort[x] > sort[x+1]:
             sort[x], sort[x+1] = sort[x+1], sort[x]
             swapped = True
-        if not swapped:
-            break
+            
+    if not swapped:
+        break
 
 print("Sorted array:", sort)
 
