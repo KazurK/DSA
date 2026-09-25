@@ -1,15 +1,15 @@
-class node:
+class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
 
-class stack:
+class Stack:
     def __init__(self):
         self.head = None
         self.size = 0
 
     def push(self, value):
-        newNode = node(value)
+        newNode = Node(value)
         if self.head:
             newNode.next = self.head
         self.head = newNode
@@ -34,12 +34,4 @@ class stack:
     def stackSize(self):
         return self.size
 
-myStack = stack()
-myStack.push("A")
-myStack.push('B')
-myStack.push('C')
 
-print("Pop: ", myStack.pop())
-print("Peek: ", myStack.peek())
-print("isEmpty: ", myStack.isEmpty())
-print("Size: ", myStack.stackSize())

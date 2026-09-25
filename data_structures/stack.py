@@ -1,4 +1,4 @@
-class stack:
+class Stack:
     def __init__(self):
         self.stack = []
 
@@ -21,14 +21,5 @@ class stack:
     def size(self):
         return len(self.stack)
 
-myStack = stack()
-myStack.push('A')
-myStack.push('B')
-myStack.push('C')
 
-print("Stack: ", myStack.stack)
-print("Pop: ", myStack.pop())
-print("Peek: ", myStack.peek())
-print("isEmpty: ", myStack.isEmpty())
-print("Size: ", myStack.size())
 

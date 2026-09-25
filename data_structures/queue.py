@@ -1,4 +1,4 @@
-class queue:
+class Queue:
     def __init__(self):
         self.queue = []
 
@@ -21,15 +21,5 @@ class queue:
     def size(self):
         return len(self.queue)
 
-testQueue = queue()
-testQueue.enqueue("A")
-testQueue.enqueue("B")
-testQueue.enqueue("C")
-testQueue.enqueue("D")
 
-print("Queue", testQueue.queue) #Expected: A, B, C, D
-print("Dequeue", testQueue.dequeue()) #Expected: A
-print("Peek", testQueue.peek()) #Expected: B
-print("isEmpty: ", testQueue.isEmpty())
-print("Size: ", testQueue.size())
 
